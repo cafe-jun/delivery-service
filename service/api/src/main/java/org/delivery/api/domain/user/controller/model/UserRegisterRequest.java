@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserRegisterRequest {
     @NotBlank
-    private String namel;
+    private String name;
     @NotBlank
     private String email;
     @NotBlank
