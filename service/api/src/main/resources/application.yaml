@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      format_sql: true
+      dialect: org.hibernate.dialect.MYSQL8Dialect
+    hibernate:
+        ddl-auto: validate
+  datasource:
+    url: jdbc:mysql://localhost:3306/delivery
+    username: delivery
+    password: Jsshin2440
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+token:
+  secret:
+    key: SpringBootJWTHelperTokenSecretKeyValue123!@#
+  access-token:
+    plus-hour: 1
+  refresh-token:
+    plus-hour: 12
