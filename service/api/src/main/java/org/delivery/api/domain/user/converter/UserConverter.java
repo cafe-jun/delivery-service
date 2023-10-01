@@ -18,7 +18,7 @@ public class UserConverter {
         return Optional.ofNullable(request)
                 .map(it -> {
                     return UserEntity.builder()
-                            .name(request.getNamel())
+                            .name(request.getName())
                             .email(request.getEmail())
                             .password(request.getPassword())
                             .address(request.getAddress())
