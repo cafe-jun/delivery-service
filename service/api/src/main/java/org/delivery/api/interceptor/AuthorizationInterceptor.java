@@ -40,7 +40,8 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
         }
 
         // TODO header 검증
-        var accessToken = request.getHeader("authorization-token");
+        var accessToken = request.getHeader("Authorization").replace("Bearer ","");
+
         if(accessToken == null) {
             throw new ApiException(TokenErrorCode.AUTHORIZATION_TOKEN_NOT_FOUND);
         }
