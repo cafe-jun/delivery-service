@@ -1,10 +1,7 @@
 package org.delivery.db.store;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -22,6 +19,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
 @Entity
+@Table(name = "store")
 public class StoreEntity extends BaseEntity {
     @Column(length = 100,nullable = false)
     private String name;

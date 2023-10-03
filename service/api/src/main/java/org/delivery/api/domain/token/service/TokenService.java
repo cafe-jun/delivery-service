@@ -21,7 +21,6 @@ public class TokenService {
 
     public TokenDto issueAccessToken(Long userId) {
         var data = new HashMap<String,Object>();
-        System.out.println("userId" + userId);
         data.put("userId",userId);
         return tokenHelperIfs.issueAccessToken(data);
     }

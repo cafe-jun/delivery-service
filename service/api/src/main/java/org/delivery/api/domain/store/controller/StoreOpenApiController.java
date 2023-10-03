@@ -19,7 +19,7 @@ public class StoreOpenApiController {
 
     private final StoreBusiness storeBusiness;
 
-    @GetMapping("/register")
+    @PostMapping("/register")
     public Api<StoreResponse> register(
           @Valid
           @RequestBody Api<StoreRegisterRequest> request

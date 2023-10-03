@@ -33,7 +33,7 @@ public class StoreMenuService {
         return Optional.ofNullable(storeMenuEntity)
                 .map(it -> {
                     it.setStatus(StoreMenuStatus.REGISTERED);
-                    return it;
+                    return storeMenuRepository.save(storeMenuEntity);
                 })
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }
