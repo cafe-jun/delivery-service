@@ -50,7 +50,7 @@ test {
 }
 
 bootJar {
-    enabled = false
+    enabled = true
 }
 
 jar {
