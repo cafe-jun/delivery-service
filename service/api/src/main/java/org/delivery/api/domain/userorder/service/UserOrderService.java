@@ -72,7 +72,7 @@ public class UserOrderService {
                 .map(it -> {
                     userOrderEntity.setStatus(UserOrderStatus.ORDER);
                     userOrderEntity.setOrderedAt(LocalDateTime.now());
-                    return userOrderEntity;
+                    return userOrderRepository.save(userOrderEntity);
                 })
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }

@@ -15,13 +15,13 @@ import java.util.Optional;
 public class StoreUserService {
 
     private final StoreUserRepository storeUserRepository;
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
     public StoreUserEntity register(
             StoreUserEntity storeUserEntity
     ){
         storeUserEntity.setStatus(StoreUserStatus.REGISTERED);
-        storeUserEntity.setPassword(passwordEncoder.encode(storeUserEntity.getPassword()));
+//        storeUserEntity.setPassword(passwordEncoder.encode(storeUserEntity.getPassword()));
         storeUserEntity.setRegisteredAt(LocalDateTime.now());
         return storeUserRepository.save(storeUserEntity);
     }
